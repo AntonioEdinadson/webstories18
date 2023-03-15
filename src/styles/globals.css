@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: #1E1E1E;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+}
+
+/* aqui é para personalizar o fundo da barra, neste caso estou colocando um fundo cinza escuro*/
+::-webkit-scrollbar-track {
+    background: #383838;
+    border-radius: 50px 0px 0 50px;
+}
+
+/* aqui é a alça da barra, que demonstra a altura que você está na página
+    estou colocando uma cor azul clara nela*/
+::-webkit-scrollbar-thumb {
+    background: #fe7608;
+    border-radius: 50px 0px 0 50px;
+}
+
+.h-screen {
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+@layer components {
+    .snap-y-mandatory {
+        scroll-snap-type: y mandatory;    
+    }
+}
